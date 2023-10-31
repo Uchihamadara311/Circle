@@ -3,6 +3,7 @@
 [ext_resource path="res://Item/Dot_lock/dot_lock.gd" type="Script" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
+radius = 20.0
 
 [node name="dot_lock" type="Area2D" groups=["dot_lock"]]
 script = ExtResource( 1 )
@@ -11,3 +12,5 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [connection signal="area_entered" from="." to="." method="_on_dot_lock_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_dot_lock_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_dot_lock_input_event"]

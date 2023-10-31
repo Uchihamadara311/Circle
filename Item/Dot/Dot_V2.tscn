@@ -4,14 +4,11 @@
 [ext_resource path="res://Item/Dot/Dot_V2.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 23.0
+radius = 28.0179
 
-[node name="body_dot" type="Area2D" groups=["dot_lock"]]
+[node name="body_dot" type="Area2D" groups=["dot"]]
 z_index = 1
 script = ExtResource( 2 )
-
-[node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
 
 [node name="Dot" type="Sprite" parent="."]
 modulate = Color( 0.439216, 0.501961, 0.564706, 1 )
@@ -22,5 +19,8 @@ texture = ExtResource( 1 )
 margin_right = 90.0
 margin_bottom = 40.0
 text = "Bruh"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
 
 [connection signal="input_event" from="." to="." method="_on_body_dot_input_event"]

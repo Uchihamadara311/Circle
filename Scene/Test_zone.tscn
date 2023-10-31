@@ -2,12 +2,19 @@
 
 [ext_resource path="res://Item/Dot/Dot_V2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Item/Circle/Circle.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Item/Dot/Dot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Test_zone.gd" type="Script" id=3]
 
 [node name="Test_zone" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Circle" parent="." instance=ExtResource( 2 )]
-position = Vector2( 159, 186 )
+position = Vector2( 374, 328 )
+
+[node name="Circle2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 551, 395 )
+
+[node name="Circle3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 748, 238 )
 
 [node name="DotV2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 439, 83 )
@@ -18,8 +25,29 @@ position = Vector2( 334, 142 )
 [node name="DotV4" parent="." instance=ExtResource( 1 )]
 position = Vector2( 420, 227 )
 
+[node name="DotV6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 524, 263 )
+
+[node name="DotV7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 642, 118 )
+
+[node name="DotV8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 784, 121 )
+
+[node name="DotV9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 609, 218 )
+
+[node name="DotV10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 473, 150 )
+
+[node name="DotV11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 556, 60 )
+
+[node name="DotV12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 364, 70 )
+
+[node name="DotV13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 390, 144 )
+
 [node name="DotV5" parent="." instance=ExtResource( 1 )]
 position = Vector2( 536, 156 )
-
-[node name="Dot" parent="." instance=ExtResource( 3 )]
-position = Vector2( 199, 65 )
