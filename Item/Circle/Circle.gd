@@ -11,4 +11,15 @@ func _on_Circle_input_event(_viewport, event, _shape_idx):
 
 func _physics_process(delta):
 	if selected:
-		global_position = lerp(global_position, get_global_mouse_position(), 10 * delta)
+		var move = move_and_slide((get_local_mouse_position() * 5))
+		move.normalized()
+	rotate_circle()
+
+
+func _input(event):
+	if event.is_action_pressed("Rotate"):
+		rotate_circle()
+
+
+func rotate_circle():
+	rotation += 1
